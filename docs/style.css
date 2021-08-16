@@ -5,6 +5,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -87,7 +90,8 @@ section {
 .about,
 .skills,
 .qualification,
-.services {
+.services,
+footer {
   font-family: "Poppins", sans-serif;
 }
 section .title {
@@ -610,6 +614,7 @@ section .title::after {
   height: 100%;
   width: 100%;
   border: 1px solid lightgray;
+  border-radius: 6px;
   outline: none;
   padding: 0 15px;
   font-size: 17px;
@@ -638,6 +643,21 @@ section .title::after {
 .contact .right form .button-area button:hover {
   background: #fff;
   color: #14dd19;
+}
+
+/* footer section styling */
+footer {
+  background: #000;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+}
+footer span a {
+  color: #14dd19;
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
 }
 
 /* animation keyframes query start  */
@@ -727,7 +747,8 @@ section .title::after {
   }
   .about .about-content .column,
   .skills .skills-content .column,
-  .qualification .project .project-item .left {
+  .qualification .project .project-item .left,
+  .contact .contact-content .column {
     width: 100%;
   }
   .about .about-content .left,
@@ -792,6 +813,19 @@ section .title::after {
   }
   .qualification .next {
     right: -30px;
+  }
+  .services .services-content .hexagon-block {
+    width: 300px;
+    height: 310px;
+  }
+  .services .services-content .hexagon-block .hexagon-content i {
+    font-size: 50px;
+  }
+  .services .services-content .hexagon-block .hexagon-content .text {
+    font-size: 20px;
+  }
+  .services .services-content .hexagon-block .hexagon-content p {
+    font-size: 14px;
   }
 }
 
