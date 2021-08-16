@@ -226,7 +226,8 @@ section .title::after {
   content: "$who -i am";
 }
 .about .about-content,
-.skills .skills-content {
+.skills .skills-content,
+.qualification .project .project-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -260,7 +261,8 @@ section .title::after {
   text-align: justify;
 }
 .about .about-content .right a,
-.skills .skills-content .left a {
+.skills .skills-content .left a,
+.qualification .project .project-item .right a {
   display: inline-block;
   color: #fff;
   background: #14dd19;
@@ -273,7 +275,8 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .about .about-content .right a:hover,
-.skills .skills-content .left a:hover {
+.skills .skills-content .left a:hover,
+.qualification .project .project-item .right a:hover {
   color: #14dd19;
   background: none;
 }
@@ -470,6 +473,53 @@ section .title::after {
   margin: 0 24px;
 }
 
+/* project slide styling */
+.qualification .project {
+  margin: 30px 80px;
+  margin-top: 60px;
+}
+.qualification .slick-arrow {
+  color: #14dd19;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.qualification .prev {
+  left: -80px;
+}
+.qualification .next {
+  right: -80px;
+}
+.qualification .project .project-item {
+  padding: 16px;
+}
+.qualification .project .project-item .left {
+  width: 48%;
+}
+.qualification .project .project-item .left img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+.qualification .project .project-item .right {
+  width: 50%;
+  padding: 16px;
+}
+.qualification .project .project-item .right .text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.qualification .project .project-item .right p {
+  font-size: 16px;
+  color: #909090;
+}
+
 /* animation keyframes query start  */
 @keyframes animate {
   0% {
@@ -490,6 +540,18 @@ section .title::after {
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
+  }
+  .qualification .project {
+    margin: 30px 50px;
+  }
+  .qualification .slick-arrow {
+    font-size: 50px;
+  }
+  .qualification .prev {
+    left: -50px;
+  }
+  .qualification .next {
+    right: -50px;
   }
 }
 
@@ -543,14 +605,16 @@ section .title::after {
     max-width: 800px;
   }
   .about .about-content .column,
-  .skills .skills-content .column {
+  .skills .skills-content .column,
+  .qualification .project .project-item .left {
     width: 100%;
   }
   .about .about-content .left,
   .skills .skills-content .left {
     margin: 0 auto 60px;
   }
-  .about .about-content .right {
+  .about .about-content .right,
+  .qualification .project .project-item .right {
     flex: 100%;
   }
 }
@@ -595,6 +659,18 @@ section .title::after {
   .qualification .qualification-content .data .round,
   .qualification .qualification-content .data .line {
     margin: 0;
+  }
+  .qualification .project {
+    margin: 30px 10px;
+  }
+  .qualification .slick-arrow {
+    font-size: 50px;
+  }
+  .qualification .prev {
+    left: -30px;
+  }
+  .qualification .next {
+    right: -30px;
   }
 }
 

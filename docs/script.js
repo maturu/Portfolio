@@ -62,6 +62,13 @@ $(document).ready(function () {
       }
     }
   });
+
+  /* slide animation script */
+  $(".project").slick({
+    dots: true,
+    prevArrow: '<i class="uil uil-angle-left slick-arrow prev"></i>',
+    nextArrow: '<i class="uil uil-angle-right slick-arrow next"></i>',
+  });
 });
 
 function gen_hexagon() {
