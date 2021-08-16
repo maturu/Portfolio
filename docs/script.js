@@ -20,6 +20,10 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".navbar i").toggleClass("active");
   });
+  $(".menu > li > a").click(function () {
+    $(".navbar .menu").removeClass("active");
+    $(".navbar i").removeClass("active");
+  });
 
   /* typing animation script */
   var typed = new Typed(".typing-1", {

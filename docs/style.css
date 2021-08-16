@@ -86,7 +86,8 @@ section {
 }
 .about,
 .skills,
-.qualification {
+.qualification,
+.services {
   font-family: "Poppins", sans-serif;
 }
 section .title {
@@ -228,7 +229,8 @@ section .title::after {
 .about .about-content,
 .skills .skills-content,
 .qualification .project .project-item,
-.services .services-content {
+.services .services-content,
+.contact .contact-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -560,6 +562,82 @@ section .title::after {
 }
 .services .services-content .hexagon-block .hexagon-content p {
   font-size: 16px;
+}
+
+/* contact section styling */
+.contact .title::after {
+  content: "$get in touch";
+}
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: #14dd19;
+}
+.contact .contact-content .info {
+  margin-left: 30px;
+}
+.contact .contact-content .info .head {
+  font-weight: 600;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area button {
+  color: #fff;
+  display: block;
+  width: 160px !important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: #14dd19;
+  border: 2px solid #14dd19;
+  transition: all 0.3s ease;
+}
+.contact .right form .button-area button:hover {
+  background: #fff;
+  color: #14dd19;
 }
 
 /* animation keyframes query start  */
