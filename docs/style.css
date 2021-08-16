@@ -227,7 +227,8 @@ section .title::after {
 }
 .about .about-content,
 .skills .skills-content,
-.qualification .project .project-item {
+.qualification .project .project-item,
+.services .services-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -282,11 +283,13 @@ section .title::after {
 }
 
 /* skills section styling */
-.skills {
+.skills,
+.services {
   color: #fff;
   background: #000;
 }
-.skills .title::before {
+.skills .title::before,
+.services .title::before {
   background: #fff;
 }
 .skills .title::after {
@@ -313,6 +316,9 @@ section .title::after {
   margin-bottom: 24px;
   border-radius: 6px;
   cursor: pointer;
+}
+.card:hover {
+  transform: translate(5px, 5px);
 }
 .card .card-content {
   display: flex;
@@ -400,7 +406,8 @@ section .title::after {
 .qualification .title {
   font-size: 35px;
 }
-.qualification .title::before {
+.qualification .title::before,
+.services .title::before {
   width: 270px;
 }
 .qualification .title::after {
@@ -520,6 +527,41 @@ section .title::after {
   color: #909090;
 }
 
+/* services section styling */
+.services .title::after {
+  content: "$what -i provide";
+  background: #000;
+}
+.services .services-content .hexagon-block {
+  width: 370px;
+  height: 380px;
+  background: #222;
+  margin: 1px auto;
+  padding: 0 16px;
+  padding-top: 40px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.3s ease;
+}
+.services .services-content .hexagon-block:hover {
+  background: #14dd19;
+  color: #000;
+  transform: translateY(-10px);
+}
+.services .services-content .hexagon-block .hexagon-content {
+  text-align: center;
+}
+.services .services-content .hexagon-block .hexagon-content i {
+  font-size: 80px;
+}
+.services .services-content .hexagon-block .hexagon-content .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.services .services-content .hexagon-block .hexagon-content p {
+  font-size: 16px;
+}
+
 /* animation keyframes query start  */
 @keyframes animate {
   0% {
@@ -601,7 +643,8 @@ section .title::after {
     padding: 10px 30px;
   }
   .about .max-width,
-  .skills .max-width {
+  .skills .max-width,
+  .services .max-width {
     max-width: 800px;
   }
   .about .about-content .column,
