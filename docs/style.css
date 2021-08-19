@@ -571,6 +571,7 @@ section .title::after {
   padding-top: 40px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: all 0.3s ease;
+  user-select: none;
 }
 .services .services-content .hexagon-block:hover {
   background: #14dd19;
