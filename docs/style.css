@@ -592,6 +592,13 @@ section .title::after {
 .services .services-content .hexagon-block .hexagon-content p {
   font-size: 16px;
 }
+.services .services-content .hexagon-block:hover .hexagon-content a {
+  color: #000;
+  text-decoration: underline;
+}
+.services .services-content .hexagon-block .hexagon-content a {
+  color: #14dd19;
+}
 
 /* contact section styling */
 .contact .title::after {
